@@ -3,7 +3,8 @@
 </script>
 
 <template>
-  <main>
-    aaa
-  </main>
+	<h1>home</h1>
 </template>
+
+<style>
+</style>
