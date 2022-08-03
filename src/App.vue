@@ -5,24 +5,31 @@ import Body from './components/Body.vue'
 </script>
 
 <template>
-	<Header />
-	<div class="wrapper">
+	<div class="base">
+		<Header />
 
 		<Body />
 	</div>
-
 </template>
 
 <style>
+.base {
+	color: #ebdec6;
+}
+
+.main {
+	color: #332301;
+}
+
+.sub {
+	color: ;
+}
+
 header {
 	line-height: 1.5;
 	max-height: 100vh;
 }
 
-.logo {
-	display: block;
-	margin: 0 auto 2rem;
-}
 
 nav {
 	width: 100%;
