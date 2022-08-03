@@ -22,7 +22,7 @@
 	
 </template>
 <style>
-	div {
+	template {
 		color: black;
 		font-weight: bold;
 	}
