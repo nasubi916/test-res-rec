@@ -22,7 +22,7 @@
 	
 </template>
 <style>
-	base {
+	.base {
 		color: black;
 		font-weight: bold;
 	}
