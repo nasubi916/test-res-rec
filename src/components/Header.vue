@@ -12,6 +12,6 @@
 
 <style>
 .back{
-    background-color: #332301;
+    background-color: ;
 }
 </style>

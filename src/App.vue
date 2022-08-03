@@ -14,11 +14,12 @@ import Body from './components/Body.vue'
 
 <style>
 .base {
-	color: #ebdec6;
+	color: black;
+	font-weight: bold;
 }
 
 .main {
-	color: #332301;
+	color: ;
 }
 
 .sub {

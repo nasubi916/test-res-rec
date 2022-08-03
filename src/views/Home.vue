@@ -21,9 +21,7 @@
 
 	
 </template>
+
 <style>
-	.base {
-		color: black;
-		font-weight: bold;
-	}
+
 </style>
