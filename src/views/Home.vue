@@ -19,4 +19,11 @@
 	<div class="sub">sub</div>
 	</div>
 
+	
 </template>
+<style>
+	div {
+		color: black;
+		font-weight: bold;
+	}
+</style>
