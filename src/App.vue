@@ -2,10 +2,12 @@
 import Header from './components/Header.vue'
 import Body from './components/Body.vue'
 
+let isBlack = false;
+
 </script>
 
 <template>
-	<div class="base">
+	<div :class="{ black: isBlack }">
 		<Header />
 
 		<Body />
@@ -13,17 +15,17 @@ import Body from './components/Body.vue'
 </template>
 
 <style>
-.base {
+.black {
 	color: black;
 	font-weight: bold;
 }
 
 .main {
-	color: ;
+	color: #000000;
 }
 
 .sub {
-	color: ;
+	color: #000000;
 }
 
 header {
