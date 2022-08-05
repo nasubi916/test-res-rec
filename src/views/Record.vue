@@ -2,18 +2,10 @@
 import { ref, reactive } from 'vue'
 import { useUserStore } from '../stores/user'
 
-// let count = ref(0)
-// const addCount = () => {
-//     count.value++;
-// }
-// const decCount = () => {
-//     count.value--;
-// } 
-
 const userPinia = useUserStore()
 const formState = reactive({
     name: "",
-    score: ""
+    score: 0
 })
 
 const submitForm = () => {
@@ -22,20 +14,15 @@ const submitForm = () => {
     console.log("submit");
     console.log(userPinia.name);
     console.log(userPinia.score);
-
 }
-
 
 </script>
 
 <template>
     <h1>record</h1>
 
-    <!-- <p>{{ count }}</p>
-    <button @click="addCount" type="button">add</button>
-    <button @click="decCount" type="button">dec</button><br><br> -->
-
-    {{ formState }}
+    フォームに入力されたやつ：{{ formState }}<br>
+    ストアに保存されたやつ：{{ userPinia }}
     <form>
         <div class="userName">
             <label for="name">name:</label>
@@ -44,11 +31,22 @@ const submitForm = () => {
 
         <div class="userScore">
             <label for="score">score:</label>
-            <input v-model="formState.score">
+            <input v-model="formState.score" type="number" min="0" max="100" step="1">
         </div>
 
         <button @click.prevent="submitForm">入力</button>
     </form><br>
 
+    <!-- <div v-for="list,index in data" :key="score.user"></div>
+        <li>{{index+1}}-{{score.user}}
+    <v-if></v-if>
+    <v-else></v-else> -->
+
     国語、英語、数学Ⅱ、数学B、地理、生物、物理
+
+    <div>
+        <div>
+            
+        </div>
+    </div>
 </template>

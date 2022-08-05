@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
 import { useUserStore } from '../stores/user'
 
 const userPinia = useUserStore();

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<div class="base">
+	<div>
 	<h1>home</h1>
 	<a href="https://ja.wikipedia.org/wiki/%E3%81%A8%E3%82%8D%E3%82%8D" target="_blank">
 	とろろ</a>(test result record)<br>
