@@ -15,6 +15,10 @@ let isBlack = false;
 </template>
 
 <style>
+.home {
+	color: blueviolet;
+	font-weight: bold;
+}
 .black {
 	color: black;
 	font-weight: bold;
