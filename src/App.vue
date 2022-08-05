@@ -16,7 +16,7 @@ let isBlack = false;
 
 <style>
 .home {
-	color: blueviolet;
+	color: rgb(0, 225, 255);
 	font-weight: bold;
 }
 .black {
