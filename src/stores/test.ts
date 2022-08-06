@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 
 export const testStore = defineStore("test", () => {
-  const score = ref(0);
 
   //とりあえず情報科のテストで考える
   const Japanese = ref(0);
@@ -13,12 +12,11 @@ export const testStore = defineStore("test", () => {
   const Creature = ref(0);
   const English = ref(0);
   const InfoIndus = ref(0);
-
+  
   const Health = ref(0);
   const Algo = ref(0);
 
   return {
-    score,
     Japanese,
     Geography,
     Math2,

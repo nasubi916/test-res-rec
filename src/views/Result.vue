@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import { useUserStore } from '../stores/test'
+import { testStore } from '../stores/test'
 
-const userPinia = useUserStore();
+const testP = testStore();
 
 </script>
 
 <template>
     <h1>result</h1>
-
-    your name is : {{ userPinia.name }}<br>
-    your score is : {{ userPinia.score }}
+    your japanese score is : {{testP.Japanese}}<br>
+    
 </template>
