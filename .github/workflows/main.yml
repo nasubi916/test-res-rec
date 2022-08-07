@@ -1,30 +1,35 @@
 name: vercel
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened]
-  workflow_dispatch:
+    push:
+        branches:
+            - main
+    pull_request:
+        types: [opened, synchronize, reopened]
+    workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    steps:
-      - uses: actions/checkout@v2
+    build:
+        runs-on: ubuntu-latest
+        if: "!contains(github.event.head_commit.message, '[skip ci]')"
+        steps:
+            - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-      - run: npm ci
-      - run: npm run build
-      - name: Deploy to Vercel Action
-        uses: BetaHuhn/deploy-to-vercel-action@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          WORKING_DIRECTORY: "./dist"
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 16.x
+            - run: npm ci
+            - run: npm run build
+            - name: copy file
+              uses: canastro/copy-file-action@master
+              with:
+                  source: "./vercel.json"
+                  target: "./dist/vercel.json"
+            - name: Deploy to Vercel Action
+              uses: BetaHuhn/deploy-to-vercel-action@v1
+              with:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+                  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+                  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+                  WORKING_DIRECTORY: "./dist"
