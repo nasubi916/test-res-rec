@@ -20,11 +20,6 @@ jobs:
           node-version: 16.x
       - run: npm ci
       - run: npm run build
-      - name: copy file
-        uses: canastro/copy-file-action@master
-        with:
-          source: "./vercel.json"
-          target: "./dist/vercel.json"
       - name: Deploy to Vercel Action
         uses: BetaHuhn/deploy-to-vercel-action@v1
         with:
