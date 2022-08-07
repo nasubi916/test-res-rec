@@ -7,6 +7,6 @@ const testP = testStore();
 
 <template>
     <h1>result</h1>
-    your japanese score is : {{testP.Japanese}}<br>
-    
+    your japanese score is : {{ testP.Japanese }}<br>
+
 </template>

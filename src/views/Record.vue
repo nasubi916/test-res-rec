@@ -80,7 +80,7 @@ const submitForm = () => {
     <form>
         <div v-if="tests">
             <div v-for="(test, index) in tests" :key="test.score">
-                <p>{{ index  }} : {{ test.id }}</p>
+                <p>{{ index + 1 }} : {{ test.id }}</p>
                 <InputNumber v-model="test.score" mode="decimal" :useGrouping="false" suffix="点" showButtons
                     decrementButtonClass="p-button-danger" incrementButtonIcon="pi pi-plus"
                     decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
