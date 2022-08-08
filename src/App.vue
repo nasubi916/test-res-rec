@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import Body from './components/Body.vue'
-
-let isBlack = false;
+import Header from './components/header.vue'
 
 </script>
 
 <template>
-	<div class="app">
-		<Body />
-	</div>
+	<Header />
+	<Body />
 </template>

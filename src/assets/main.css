@@ -2,7 +2,6 @@
 
 a,
 .green {
-  text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
 }
@@ -13,9 +12,9 @@ a,
   }
 }
 
-header {
-	line-height: 1.5;
-	max-height: 100vh;
+.size {
+	width: 600px;
+	height: 600px;
 }
 
 @media (min-width: 1024px) {

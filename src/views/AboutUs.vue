@@ -6,4 +6,5 @@
 	<h1>AboutUs</h1>
 
 	・nasubi
+	<i class="pi pi-github"></i>
 </template>
