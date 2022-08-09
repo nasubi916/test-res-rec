@@ -16,8 +16,12 @@ const thirdFinalP = thirdFinalStore()
 
 const terms = ref([
     {
-        
+        aaa: 0
     },
+    {
+        aaa: 1
+    },
+
 ])
 
 const japaneseData = ref({
@@ -80,10 +84,11 @@ const japaneseOptions = ref({
 
 <template>
     <div v-if="terms">
-           <div v-for="(term,index) in terms" :key="term.">
+        <div v-for="(term, index) in terms" :key="term.aaa">
             <Card class="size">
                 <template #content>
                     <Chart type="bar" :data="japaneseData" :options="japaneseOptions" />
+                {{ index }}++++{{ term.aaa }}
                 </template>
             </Card>
         </div>
