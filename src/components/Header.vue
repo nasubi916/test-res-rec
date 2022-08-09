@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import TabMenu from 'primevue/tabmenu';
 
-const items = ref([
+const routes = ref([
 	{
 		label: 'Home',
 		icon: 'pi pi-fw pi-home',
@@ -11,7 +11,7 @@ const items = ref([
 	{
 		label: 'Result',
 		icon: 'pi pi-fw pi-pencil',
-		to: '/result',
+		to: '/result/fm',
 		visible: true,
 		//次々現れるようにする
 	},
@@ -26,6 +26,11 @@ const items = ref([
 		to: '/us',
 	},
 	{
+		label:'TestField',
+		icon:'pi pi-bolt',
+		to: '/test'
+	},
+	{
 		icon: 'pi pi-link',
 	},
 	{
@@ -36,6 +41,22 @@ const items = ref([
 	{
 		icon: 'pi pi-twitter',
 	},
+		{
+		icon: 'pi pi-image',
+	},
+	{
+		icon: 'pi pi-camera',
+	},
+	{
+		icon: 'pi pi-user-edit',
+	},
+	{
+		icon: 'pi pi-copy',
+	},
+	{
+		icon: 'pi pi-external-link',
+	},
+
 	{
 		icon: 'pi pi-instagram',
 		class: 'right'
@@ -46,7 +67,7 @@ const items = ref([
 </script>
 
 <template>
-	<TabMenu :model="items" />
+	<TabMenu :model="routes" />
 </template>
 
 <style>

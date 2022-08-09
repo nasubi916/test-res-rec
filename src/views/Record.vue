@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { testStore } from '../stores/test'
+import { firstMidStore } from '../stores/firstMid'
 import Chart from 'primevue/chart';
 import Card from 'primevue/card'
 
-const testP = testStore();
+const testP = firstMidStore();
 
 const chartData = ref({
     labels: ['Japanese', 'Geography', 'Math2', 'MathB', 'Physics', 'Creature', 'English', 'InfoIndus'],
