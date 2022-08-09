@@ -10,7 +10,7 @@ const chartData = ref({
     labels: ['Japanese', 'Geography', 'Math2', 'MathB', 'Physics', 'Creature', 'English', 'InfoIndus'],
     datasets: [
         {
-            label: 'final test',
+            label: 'your score',
             backgroundColor: 'rgba(255,99,132,0.2)',
             borderColor: 'rgba(255,99,132,1)',
             pointBackgroundColor: 'rgba(255,99,132,1)',
@@ -20,7 +20,7 @@ const chartData = ref({
             data: [testP.Japanese, testP.Geography, testP.Math2, testP.MathB, testP.Physics, testP.Creature, testP.English, testP.InfoIndus]
         },
         {
-            label: 'average test',
+            label: 'average score',
             backgroundColor: 'rgba(179,181,198,0.2)',
             borderColor: 'rgba(179,181,198,1)',
             pointBackgroundColor: 'rgba(179,181,198,1)',

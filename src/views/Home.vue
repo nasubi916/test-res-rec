@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import Button from 'primevue/button'
 </script>
 
 <template>
@@ -16,7 +16,8 @@
 	<br>名電向けだけど将来的に汎用化するつもり
 	<br>ーー始めるーー
 	<!-- 始めるボタンを押すとResultが現れて（Visibleを変更）導線を引く -->
-	<br>
+	<br><Button>fffff</Button>
+	<br><br>
 	</div>
 
 </template>
