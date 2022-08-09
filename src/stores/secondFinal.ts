@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 
 export const secondFinalStore = defineStore("secondFinal", () => {
-  //とりあえず情報科のテストで考える
   const Japanese = ref(33);
   const JapaneseAv = ref(78);
 

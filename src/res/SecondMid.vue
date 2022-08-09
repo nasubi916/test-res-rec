@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { SecondMidStore } from '../stores/secondMid'
+import { secondMidStore } from '../stores/secondMid'
 import InputNumber from 'primevue/inputnumber';
 import Button from 'primevue/button';
 
@@ -101,7 +101,7 @@ const submitForm = () => {
 </script>
 
 <template>
-<h2>first-mid</h2>
+<h2>secondMid</h2>
     <form>
         <div v-if="tests">
             <Button @click.prevent="submitForm">入力</Button>

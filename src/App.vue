@@ -7,7 +7,6 @@ import Header from './components/Header.vue'
 <template>
 	<div class="p-ripple purple" v-ripple>
 		<Header />
-
 		<Body />
 	</div>
 </template>

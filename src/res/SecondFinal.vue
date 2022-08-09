@@ -101,7 +101,7 @@ const submitForm = () => {
 </script>
 
 <template>
-<h2>first-mid</h2>
+<h2>secondFinal</h2>
     <form>
         <div v-if="tests">
             <Button @click.prevent="submitForm">入力</Button>
