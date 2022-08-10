@@ -1,9 +1,10 @@
-
 <script setup lang="ts">
 import { ref } from 'vue';
-import { firstMidStore } from '../stores/firstMid'
-import Chart from 'primevue/chart';
-import Card from 'primevue/card'
+import { firstMidStore } from '@/stores/firstMid';
+import { firstFinalStore } from '@/stores/firstFinal';
+import { secondMidStore } from '@/stores/secondMid';
+import { secondFinalStore } from '@/stores/secondFinal';
+import { thirdFinalStore } from '@/stores/thirdFinal';
 
 const firstMidP = firstMidStore();
 
@@ -33,7 +34,7 @@ const radarData = ref({
     ]
 });
 
-const radarOptions = ref({
+const Options = ref({
     plugins: {
         elements: {
             borderAlign: 'inner'
@@ -66,9 +67,5 @@ const radarOptions = ref({
 </script>
 
 <template>
-    <Card class="size">
-        <template #content>
-            <Chart type="radar" :data="radarData" :options="radarOptions" />
-        </template>
-    </Card>
+    <Chart type="radar" :data="radarData" :options="Options" />
 </template>

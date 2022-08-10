@@ -26,22 +26,17 @@ const routes = ref([
 		to: '/us',
 	},
 	{
-		label:'TestField',
-		icon:'pi pi-bolt',
+		label: 'TestField',
+		icon: 'pi pi-bolt',
 		to: '/test'
 	},
 	{
 		icon: 'pi pi-link',
 	},
 	{
-		icon: 'pi pi-github',
-		url: 'https://github.com/nasubi916',
-		target: '_blank',
-	},
-	{
 		icon: 'pi pi-twitter',
 	},
-		{
+	{
 		icon: 'pi pi-image',
 	},
 	{
@@ -67,7 +62,7 @@ const routes = ref([
 </script>
 
 <template>
-	<TabMenu :model="routes" />
+	<TabMenu :model="routes" class="color"/>
 </template>
 
 <style>

@@ -2,35 +2,35 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 
 export const thirdFinalStore = defineStore("thirdFinal", () => {
-  const Japanese = ref(33);
-  const JapaneseAv = ref(78);
+  const Japanese = ref(Math.floor(Math.random()*101));
+  const JapaneseAv = ref(Math.floor(Math.random()*101));
 
-  const Geography = ref(90);
-  const GeographyAv = ref(78);
+  const Geography = ref(Math.floor(Math.random()*101));
+  const GeographyAv = ref(Math.floor(Math.random()*101));
 
-  const Math2 = ref(93);
-  const Math2Av = ref(78);
+  const Math2 = ref(Math.floor(Math.random()*101));
+  const Math2Av = ref(Math.floor(Math.random()*101));
 
-  const MathB = ref(70);
-  const MathBAv = ref(78);
+  const MathB = ref(Math.floor(Math.random()*101));
+  const MathBAv = ref(Math.floor(Math.random()*101));
 
-  const Physics = ref(72);
-  const PhysicsAv = ref(52);
+  const Physics = ref(Math.floor(Math.random()*101));
+  const PhysicsAv = ref(Math.floor(Math.random()*101));
 
-  const Creature = ref(88);
-  const CreatureAv = ref(80);
+  const Creature = ref(Math.floor(Math.random()*101));
+  const CreatureAv = ref(Math.floor(Math.random()*101));
 
-  const English = ref(82);
-  const EnglishAv = ref(71);
+  const English = ref(Math.floor(Math.random()*101));
+  const EnglishAv = ref(Math.floor(Math.random()*101));
 
-  const InfoIndus = ref(92);
-  const InfoIndusAv = ref(82);
+  const InfoIndus = ref(Math.floor(Math.random()*101));
+  const InfoIndusAv = ref(Math.floor(Math.random()*101));
 
-  const Health = ref(0);
-  const HealthAv = ref(0);
+  const Health = ref(Math.floor(Math.random()*101));
+  const HealthAv = ref(Math.floor(Math.random()*101));
 
-  const Algo = ref(0);
-  const AlgoAv = ref(0);
+  const Algo = ref(Math.floor(Math.random()*101));
+  const AlgoAv = ref(Math.floor(Math.random()*101));
 
   return {
     Japanese,

@@ -1,28 +1,27 @@
 import { defineStore } from "pinia";
-import { ref } from "vue";
 
 export const colorStore = defineStore("color", () => {
-  const JapaneseCo = "";
-  const GeographyCo = "";
-  const Math2Co = "";
-  const MathBCo = "";
-  const PhysicsCo = "";
-  const CreatureCo = "";
-  const EnglishCo = "";
-  const InfoIndusCo = "";
-  const HealthCo = "";
-  const AlgoCo = "";
+  const Japanese = "red";
+  const Geography = "yellow";
+  const Math2 = "blue";
+  const MathB = "cyan";
+  const Physics = "orange";
+  const Creature = "green";
+  const English = "purple";
+  const InfoIndus = "gray";
+  const Health = "pink";
+  const Algo = "teal";
   
   return {
-    JapaneseCo,
-    GeographyCo,
-    Math2Co,
-    MathBCo,
-    PhysicsCo,
-    CreatureCo,
-    EnglishCo,
-    InfoIndusCo,
-    HealthCo,
-    AlgoCo,
+    Japanese,
+    Geography,
+    Math2,
+    MathB,
+    Physics,
+    Creature,
+    English,
+    InfoIndus,
+    Health,
+    Algo,
   };
 });

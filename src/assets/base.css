@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 
-base{
-  font-family:'Courier New', Courier, monospace;
-}
+
 
 body {
   min-height: 100vh;
@@ -10,7 +8,7 @@ body {
   background: #f6f6f6;
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: 'Rubik', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: var(--font-family);
   font-size: medium;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
