@@ -12,11 +12,11 @@ import SecondMid from "@/res/SecondMid.vue";
 import SecondFinal from "@/res/SecondFinal.vue";
 import ThirdFinal from "@/res/ThirdFinal.vue";
 
-import RadarFM from "@/rec/radar/RadarFM.vue";
-import RadarFF from "@/rec/radar/RadarFF.vue";
-import RadarSM from "@/rec/radar/RadarSM.vue";
-import RadarSF from "@/rec/radar/RadarSF.vue";
-import RadarTF from "@/rec/radar/RadarTF.vue";
+import RadarFM from "@/radar/RadarFM.vue";
+import RadarFF from "@/radar/RadarFF.vue";
+import RadarSM from "@/radar/RadarSM.vue";
+import RadarSF from "@/radar/RadarSF.vue";
+import RadarTF from "@/radar/RadarTF.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,7 +27,7 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: "/result/:aa",
+      path: "/result/:a",
       name: "Result",
       component: Result,
       children: [
@@ -67,11 +67,15 @@ const router = createRouter({
           component: RadarFM,
         },
         {
+          path:"/rfm",
+          component: RadarFM,
+        },
+        {
           path: "/rff",
           component: RadarFF,
         },
         {
-          path: "/sm",
+          path: "/rsm",
           component: RadarSM,
         },
         {

@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { firstMidStore } from '@/stores/firstMid';
-import { firstFinalStore } from '@/stores/firstFinal';
-import { secondMidStore } from '@/stores/secondMid';
-import { secondFinalStore } from '@/stores/secondFinal';
-import { thirdFinalStore } from '@/stores/thirdFinal';
+import Chart from 'primevue/chart';
 
 const firstMidP = firstMidStore();
 
@@ -67,5 +64,6 @@ const Options = ref({
 </script>
 
 <template>
+<h2>radarFM</h2>
     <Chart type="radar" :data="radarData" :options="Options" />
 </template>

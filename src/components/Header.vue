@@ -18,7 +18,7 @@ const routes = ref([
 	{
 		label: 'Record',
 		icon: 'pi pi-fw pi-file',
-		to: '/record',
+		to: '/record/rfm',
 	},
 	{
 		label: 'AboutUs',
@@ -62,7 +62,7 @@ const routes = ref([
 </script>
 
 <template>
-	<TabMenu :model="routes" class="color"/>
+	<TabMenu :model="routes" />
 </template>
 
 <style>

@@ -7,25 +7,25 @@ import Combo from '@/rec/Combo.vue';
 const radars = ref([
     {
         label: 'firstMid',
-        to: '/fm'
+        to: '/rfm'
     },
     {
         label: 'firstFinal',
-        to: '/ff'
+        to: '/rff'
     },
     {
         label: 'secondMid',
-        to: '/sm'
+        to: '/rsm'
     },
     {
         label: 'secondFinal',
-        to: '/sf'
+        to: '/rsf'
     },
     {
         label: 'thirdFinal',
-        to: '/tf'
+        to: '/rtf'
     }
-])
+]);
 
 </script> 
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { RouterView } from 'vue-router'
+import { ref } from 'vue';
 import TabMenu from 'primevue/tabmenu';
+import { RouterView } from 'vue-router';
 
 const testTerm = ref([
     {
