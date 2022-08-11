@@ -13,7 +13,7 @@ const routes = ref([
 		icon: 'pi pi-fw pi-pencil',
 		to: '/result/fm',
 		visible: true,
-		//次々現れるようにする
+		//次々現れるようにする class="p-ripple purple" v-ripple
 	},
 	{
 		label: 'Record',
@@ -24,39 +24,13 @@ const routes = ref([
 		label: 'AboutUs',
 		icon: 'pi pi-user',
 		to: '/us',
+		class:'right'
 	},
 	{
 		label: 'TestField',
 		icon: 'pi pi-bolt',
 		to: '/test'
 	},
-	{
-		icon: 'pi pi-link',
-	},
-	{
-		icon: 'pi pi-twitter',
-	},
-	{
-		icon: 'pi pi-image',
-	},
-	{
-		icon: 'pi pi-camera',
-	},
-	{
-		icon: 'pi pi-user-edit',
-	},
-	{
-		icon: 'pi pi-copy',
-	},
-	{
-		icon: 'pi pi-external-link',
-	},
-
-	{
-		icon: 'pi pi-instagram',
-		class: 'right'
-	},
-
 ]);
 
 </script>

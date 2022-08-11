@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import Button from 'primevue/button'
+
+const isLoading=ref(true)
+
 </script>
 
 <template>
@@ -16,7 +20,8 @@ import Button from 'primevue/button'
 	<br>名電向けだけど将来的に汎用化するつもり
 	<br>ーー始めるーー
 	<!-- 始めるボタンを押すとResultが現れて（Visibleを変更）導線を引く -->
-	<br><Button>fffff</Button>
+	<br><Button class="p-button-raised p-button-rounded p-button-outlined p-button-link" >fffff</Button>
+	<Button label="Save" icon="pi pi-check" :loading="isLoading" />
 	<br><br>
 	</div>
 

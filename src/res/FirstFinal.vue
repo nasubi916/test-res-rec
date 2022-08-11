@@ -101,15 +101,18 @@ const submitForm = () => {
 </script>
 
 <template>
-<h2>firstFinal</h2>
+    <h2>firstFinal</h2>
     <form>
         <div v-if="tests">
-            <Button @click.prevent="submitForm">入力</Button>
+            <Button @click.prevent="submitForm" class="p-button-raised p-button-outlined">入力</Button>
             <div v-for="(test, index) in tests" :key="test.score">
-                <p>{{ index }} : {{ test.id }}</p>
-                <InputNumber v-model="test.score" mode="decimal" :useGrouping="false" suffix="点" showButtons
-                    decrementButtonClass="p-button-danger" incrementButtonIcon="pi pi-plus"
-                    decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
+                <span class="p-float-label input">
+                    <InputNumber v-model="test.score" mode="decimal" :useGrouping="false" suffix="点" showButtons
+                        decrementButtonClass="p-button-danger" incrementButtonIcon="pi pi-plus"
+                        decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
+                    <label for="InputNumber">{{ index + 1 }} : {{ test.id }}</label>
+                </span>
+
             </div>
             <br>
         </div>
@@ -117,12 +120,15 @@ const submitForm = () => {
 
     <form>
         <div v-if="tests">
-            <Button @click.prevent="submitForm">入力</Button>
+            <Button @click.prevent="submitForm" class="p-button-raised p-button-outlined">入力</Button>
             <div v-for="(test, index) in tests" :key="test.av">
-                <p>{{ index + 1 }} : {{ test.id }}</p>
-                <InputNumber v-model="test.av" mode="decimal" :useGrouping="false" suffix="点" showButtons
-                    decrementButtonClass="p-button-danger" incrementButtonIcon="pi pi-plus"
-                    decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
+                <span class="p-float-label input">
+                    <InputNumber v-model="test.av" mode="decimal" :useGrouping="false" suffix="点" showButtons
+                        decrementButtonClass="p-button-danger" incrementButtonIcon="pi pi-plus"
+                        decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
+                    <label for="InputNumber">{{ index + 1 }} : {{ test.id }}</label>
+                </span>
+
             </div>
             <br>
         </div>

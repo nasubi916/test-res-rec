@@ -27,13 +27,6 @@ export const firstMidStore = defineStore("firstMid", () => {
   const InfoIndus = ref(Math.floor(Math.random()*101));
   const InfoIndusAv = ref(Math.floor(Math.random()*101));
 
-  
-  const Health = ref(Math.floor(Math.random()*101));
-  const HealthAv = ref(Math.floor(Math.random()*101));
-
-  const Algo = ref(Math.floor(Math.random()*101));
-  const AlgoAv = ref(Math.floor(Math.random()*101));
-
   return {
     Japanese,
     JapaneseAv,
@@ -58,11 +51,5 @@ export const firstMidStore = defineStore("firstMid", () => {
 
     InfoIndus,
     InfoIndusAv,
-
-    Health,
-    HealthAv,
-
-    Algo,
-    AlgoAv,
   };
 });

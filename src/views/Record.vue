@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import SpeedDial from 'primevue/speeddial';
 import TabMenu from 'primevue/tabmenu';
 import { RouterView } from 'vue-router';
+import Card from 'primevue/card';
 import Combo from '@/rec/Combo.vue';
 
 const radars = ref([
@@ -30,34 +31,30 @@ const radars = ref([
 
 const num = ref(0);
 
+function bbb() {
+    num.value++
+}
+
 const shares = ref([
     {
-        label: 'share',
+        label: 'link',
         icon: 'pi pi-link',
-        click: () => {
-            num.value++
+    },
+    {
+        label: 'twitter',
+        icon: 'pi pi-twitter',
+        command: () => {
+            window.location.href = 'https://github.com/nasubi916'
+
         }
     },
     {
-        label: 'share',
-        icon: '',
-        click: () => {
-            num.value++
-        }
+        label: 'photo',
+        icon: 'pi pi-image',
     },
     {
-        label: 'share',
-        icon: '',
-        click: () => {
-            num.value++
-        }
-    },
-    {
-        label: 'share',
-        icon: '',
-        click: () => {
-            num.value++
-        }
+        label: 'instagram',
+        icon: 'pi pi-instagram',
     },
 ])
 
@@ -65,11 +62,15 @@ const shares = ref([
 
 <template>
     <h1>record</h1>
-    {{num}}
+    <SpeedDial :model="shares" class="bottom-right" type="quarter-circle" direction="up-left" :radius=150 @click=bbb()
+        showIcon="pi pi-link" />
     <TabMenu :model="radars" />
-    <RouterView />
-    <SpeedDial :model="shares" class="bottom-right" type="quarter-circle" direction="up-left" :radius=150 />
+    <Card class="size">
+        <template #content>
+            <RouterView />
+        </template>
+    </Card>
     <Combo />
-    
+
 
 </template>

@@ -30,6 +30,7 @@ const testTerm = ref([
 
 <template>
     <h1>result</h1>
+    
     <TabMenu :model="testTerm" />
     <RouterView />
     <!-- 総合計と平均獲得点数をComputedで出す -->

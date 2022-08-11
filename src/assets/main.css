@@ -16,6 +16,14 @@ i {
   color: var(--text-color);
 }
 
+.menu{
+  position: fixed;
+}
+
+.input{
+  margin:20px
+}
+
 .right {
 	position: absolute;
 	top: 0;
@@ -32,7 +40,6 @@ i {
 .size {
   width: 500px;
   height: 500px;
-  background-color: var();
 }
 
 @media (min-width: 1024px) {

@@ -7,6 +7,7 @@ import { secondFinalStore } from '@/stores/secondFinal';
 import { thirdFinalStore } from '@/stores/thirdFinal';
 import { colorStore } from '@/stores/color';
 import Chart from 'primevue/chart';
+import Card from 'primevue/card';
 
 const firstMidP = firstMidStore();
 const firstFinalP = firstFinalStore();
@@ -204,14 +205,14 @@ const terms = ref([
     {
         sub: {
             id: 'Health',
-            labels: ['firstMid', 'FirstFinal', 'secondMid', 'secondFinal', 'thirdFinal'],
+            labels: ['FirstFinal', 'secondFinal', 'thirdFinal'],
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
                 borderColor: 'var(--gray-50)',
                 borderWidth: 2,
                 fill: false,
-                data: [firstMidP.HealthAv, firstFinalP.HealthAv, secondMidP.HealthAv, secondFinalP.HealthAv, thirdFinalP.HealthAv]
+                data: [firstFinalP.HealthAv, secondFinalP.HealthAv, thirdFinalP.HealthAv]
                 //データをPiniaで配列保存したものを読み取る
             },
             {
@@ -220,21 +221,21 @@ const terms = ref([
                 backgroundColor: colorP.Health,
                 borderColor: 'white',
                 borderWidth: 2,
-                data: [firstMidP.Health, firstFinalP.Health, secondMidP.Health, secondFinalP.Health, thirdFinalP.Health]
+                data: [firstFinalP.Health, secondFinalP.Health, thirdFinalP.Health]
             }]
         }
     },
     {
         sub: {
             id: 'Algo',
-            labels: ['firstMid', 'FirstFinal', 'secondMid', 'secondFinal', 'thirdFinal'],
+            labels: ['FirstFinal', 'secondFinal', 'thirdFinal'],
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
                 borderColor: 'var(--gray-50)',
                 borderWidth: 2,
                 fill: false,
-                data: [firstMidP.AlgoAv, firstFinalP.AlgoAv, secondMidP.AlgoAv, secondFinalP.AlgoAv, thirdFinalP.AlgoAv]
+                data: [firstFinalP.AlgoAv, secondFinalP.AlgoAv, thirdFinalP.AlgoAv]
                 //データをPiniaで配列保存したものを読み取る
             },
             {
@@ -243,7 +244,7 @@ const terms = ref([
                 backgroundColor: colorP.Algo,
                 borderColor: 'white',
                 borderWidth: 2,
-                data: [firstMidP.Algo, firstFinalP.Algo, secondMidP.Algo, secondFinalP.Algo, thirdFinalP.Algo]
+                data: [firstFinalP.Algo, secondFinalP.Algo, thirdFinalP.Algo]
             }]
         }
     },
@@ -288,10 +289,16 @@ const Options = ref({
 </script>
 
 <template>
-    <div v-if="terms">
+    <div v-if="terms" class="flex">
         <div v-for="(term, index) in terms">
-            <br>{{ terms[index].sub.id}}
-            <Chart type="bar" :data="term.sub" :options="Options" />
+            <Card class="size">
+                <template #title>
+                    <br>{{ terms[index].sub.id }}
+                </template>
+                <template #content>
+                    <Chart type="bar" :data="term.sub" :options="Options" />
+                </template>
+            </Card>
         </div>
     </div>
 </template>
