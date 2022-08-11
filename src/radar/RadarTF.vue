@@ -6,7 +6,7 @@ import Chart from 'primevue/chart';
 const thirdFinalP = thirdFinalStore();
 
 const radarData = ref({
-    labels: ['Japanese', 'Geography', 'Math2', 'MathB', 'Physics', 'Creature', 'English', 'InfoIndus'],
+    labels: ['Japanese', 'Geography', 'Math2', 'MathB', 'Physics', 'Creature', 'English', 'InfoIndus','Health','Algo'],
     datasets: [
         {
             label: 'your score',
@@ -16,7 +16,7 @@ const radarData = ref({
             pointBorderColor: '#fff',
             pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: 'rgba(255,99,132,1)',
-            data: [thirdFinalP.Japanese, thirdFinalP.Geography, thirdFinalP.Math2, thirdFinalP.MathB, thirdFinalP.Physics, thirdFinalP.Creature, thirdFinalP.English, thirdFinalP.InfoIndus]
+            data: [thirdFinalP.Japanese, thirdFinalP.Geography, thirdFinalP.Math2, thirdFinalP.MathB, thirdFinalP.Physics, thirdFinalP.Creature, thirdFinalP.English, thirdFinalP.InfoIndus,thirdFinalP.Health,thirdFinalP.Algo]
         },
         {
             label: 'average score',
@@ -26,7 +26,7 @@ const radarData = ref({
             pointBorderColor: '#fff',
             pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: 'rgba(179,181,198,1)',
-            data: [thirdFinalP.JapaneseAv, thirdFinalP.GeographyAv, thirdFinalP.Math2Av, thirdFinalP.MathBAv, thirdFinalP.PhysicsAv, thirdFinalP.CreatureAv, thirdFinalP.EnglishAv, thirdFinalP.InfoIndusAv]
+            data: [thirdFinalP.JapaneseAv, thirdFinalP.GeographyAv, thirdFinalP.Math2Av, thirdFinalP.MathBAv, thirdFinalP.PhysicsAv, thirdFinalP.CreatureAv, thirdFinalP.EnglishAv, thirdFinalP.InfoIndusAv,thirdFinalP.HealthAv,thirdFinalP.AlgoAv]
         },
     ]
 });
@@ -64,5 +64,6 @@ const Options = ref({
 </script>
 
 <template>
+<h2>radarTF</h2>
     <Chart type="radar" :data="radarData" :options="Options" />
 </template>

@@ -64,11 +64,3 @@ const routes = ref([
 <template>
 	<TabMenu :model="routes" />
 </template>
-
-<style>
-.right {
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-</style>

@@ -16,6 +16,19 @@ i {
   color: var(--text-color);
 }
 
+.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.bottom-right{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+}
+
 .size {
   width: 500px;
   height: 500px;
