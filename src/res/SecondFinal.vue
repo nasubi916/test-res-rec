@@ -9,129 +9,151 @@ const testP = secondFinalStore()
 
 const tests = ref([
     {
-        id: "japanese",
-        score: testP.Japanese,
-        av: testP.JapaneseAv,
+        test: [
+            {
+                id: "japanese",
+                num: '1',
+                score: testP.Japanese,
+                av: testP.JapaneseAv,
+            },
+            {
+                id: "geography",
+                num: '2',
+                score: testP.Geography,
+                av: testP.GeographyAv,
+            },
+            {
+                id: "math2",
+                num: '3',
+                score: testP.Math2,
+                av: testP.Math2Av,
+            },
+            {
+                id: "mathB",
+                num: '4',
+                score: testP.MathB,
+                av: testP.MathBAv,
+            },
+            {
+                id: "Physics",
+                num: '5',
+                score: testP.Physics,
+                av: testP.PhysicsAv,
+            },
+        ]
     },
     {
-        id: "geography",
-        score: testP.Geography,
-        av: testP.GeographyAv,
-
-    },
-    {
-        id: "math2",
-        score: testP.Math2,
-        av: testP.Math2Av,
-
-    },
-    {
-        id: "mathB",
-        score: testP.MathB,
-        av: testP.MathBAv,
-
-    },
-    {
-        id: "Physics",
-        score: testP.Physics,
-        av: testP.PhysicsAv,
-
-    },
-    {
-        id: "Creature",
-        score: testP.Creature,
-        av: testP.CreatureAv,
-    },
-    {
-        id: "English",
-        score: testP.English,
-        av: testP.EnglishAv,
-    },
-    {
-        id: "InfoIndus",
-        score: testP.InfoIndus,
-        av: testP.InfoIndusAv,
-    },
-    {
-        id: "Health",
-        score: testP.Health,
-        av: testP.HealthAv,
-    },
-    {
-        id: "Algo",
-        score: testP.Algo,
-        av: testP.AlgoAv,
-    },
-
+        test: [
+            {
+                id: "Creature",
+                num: '6',
+                score: testP.Creature,
+                av: testP.CreatureAv,
+            },
+            {
+                id: "English",
+                num: '7',
+                score: testP.English,
+                av: testP.EnglishAv,
+            },
+            {
+                id: "InfoIndus",
+                num: '8',
+                score: testP.InfoIndus,
+                av: testP.InfoIndusAv,
+            },
+            {
+                id: "Health",
+                num: '9',
+                score: testP.Health,
+                av: testP.HealthAv,
+            },
+            {
+                id: "Algo",
+                num: '10',
+                score: testP.Algo,
+                av: testP.AlgoAv,
+            },
+        ]
+    }
 ])
 
 const submitForm = () => {
-    testP.Japanese = tests.value[0].score
-    testP.JapaneseAv = tests.value[0].av
+    testP.Japanese = tests.value[0].test[0].score
+    testP.JapaneseAv = tests.value[0].test[0].av
 
-    testP.Geography = tests.value[1].score
-    testP.GeographyAv = tests.value[1].av
+    testP.Geography = tests.value[0].test[1].score
+    testP.GeographyAv = tests.value[0].test[1].av
 
-    testP.Math2 = tests.value[2].score
-    testP.Math2Av = tests.value[2].av
+    testP.Math2 = tests.value[0].test[2].score
+    testP.Math2Av = tests.value[0].test[2].av
 
-    testP.MathB = tests.value[3].score
-    testP.MathBAv = tests.value[3].av
+    testP.MathB = tests.value[0].test[3].score
+    testP.MathBAv = tests.value[0].test[3].av
 
-    testP.Physics = tests.value[4].score
-    testP.PhysicsAv = tests.value[4].av
+    testP.Physics = tests.value[0].test[4].score
+    testP.PhysicsAv = tests.value[0].test[4].av
 
-    testP.Creature = tests.value[5].score
-    testP.CreatureAv = tests.value[5].av
+    testP.Creature = tests.value[1].test[0].score
+    testP.CreatureAv = tests.value[1].test[0].av
 
-    testP.English = tests.value[6].score
-    testP.EnglishAv = tests.value[6].av
+    testP.English = tests.value[1].test[1].score
+    testP.EnglishAv = tests.value[1].test[1].av
 
-    testP.InfoIndus = tests.value[7].score
-    testP.InfoIndusAv = tests.value[7].av
+    testP.InfoIndus = tests.value[1].test[2].score
+    testP.InfoIndusAv = tests.value[1].test[2].av
 
-    testP.Health = tests.value[8].score
-    testP.HealthAv = tests.value[8].av
+    testP.Health = tests.value[1].test[3].score
+    testP.HealthAv = tests.value[1].test[3].av
 
-    testP.Algo = tests.value[9].score
-    testP.AlgoAv = tests.value[9].av
+    testP.Algo = tests.value[1].test[4].score
+    testP.AlgoAv = tests.value[1].test[4].av
     //いつかFor文でまとめる
 }
+
+const num = ref()
 
 </script>
 
 <template>
-    <h2>secondFinal</h2>
+    <h2>firstFinal</h2>
     <form>
-        <div v-if="tests">
-            <Button @click.prevent="submitForm" class="p-button-raised p-button-outlined">入力</Button>
-            <div v-for="(test, index) in tests" :key="test.score">
-                <span class="p-float-label input">
-                    <InputNumber v-model="test.score" mode="decimal" :useGrouping="false" suffix="点" showButtons
-                        decrementButtonClass="p-button-danger" incrementButtonIcon="pi pi-plus"
-                        decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
-                    <label for="InputNumber">{{ index + 1 }} : {{ test.id }}</label>
-                </span>
-
+        <div v-for="test in tests" class="grid p-fluid">
+            <div v-for="ts in test">
+                <div class="p-inputgroup">
+                    <div v-for="t in ts">
+                        <span class="p-float-label input ">
+                            <InputNumber v-model="t.score" mode="decimal" :useGrouping="false" suffix="点" showButtons
+                                incrementButtonClass="p-button-outlined"
+                                decrementButtonClass="p-button-danger p-button-outlined"
+                                incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
+                            <label for="InputNumber">{{ t.num }} : {{ t.id }}</label>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <br>
         </div>
+        <Button @click.prevent="submitForm()" class="p-button-raised p-button-outlined">入力</Button>
+        <br>
     </form>
 
     <form>
-        <div v-if="tests">
-            <Button @click.prevent="submitForm" class="p-button-raised p-button-outlined">入力</Button>
-            <div v-for="(test, index) in tests" :key="test.av">
-                <span class="p-float-label input">
-                    <InputNumber v-model="test.av" mode="decimal" :useGrouping="false" suffix="点" showButtons
-                        decrementButtonClass="p-button-danger" incrementButtonIcon="pi pi-plus"
-                        decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
-                    <label for="InputNumber">{{ index + 1 }} : {{ test.id }}</label>
-                </span>
-
+        <div v-for="test in tests" class="grid p-fluid">
+            <div v-for="ts in test">
+                <div class="p-inputgroup">
+                    <div v-for="t in ts">
+                        <span class="p-float-label input ">
+                            <InputNumber v-model="t.av" mode="decimal" :useGrouping="false" suffix="点" showButtons
+                                incrementButtonClass="p-button-outlined"
+                                decrementButtonClass="p-button-danger p-button-outlined"
+                                incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" :min=0 :max=100 />
+                            <label for="InputNumber">{{ t.num }} : {{ t.id }}</label>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <br>
         </div>
+        <Button @click.prevent="submitForm()" class="p-button-raised p-button-outlined">入力</Button>
     </form>
 
 </template>

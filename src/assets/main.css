@@ -16,10 +16,6 @@ i {
   color: var(--text-color);
 }
 
-.menu{
-  position: fixed;
-}
-
 .input{
   margin:20px
 }
