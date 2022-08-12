@@ -1,23 +1,36 @@
 <script setup lang="ts">
-import { useToast } from "primevue/usetoast";
-import Toast from 'primevue/toast';
 import Button from "primevue/button";
+import InputNumber from "primevue/inputnumber";
+import InputText from 'primevue/inputtext'
 
-const toast = useToast();
-
-const showSuccess = () => {
-    toast.add({ severity: 'success', summary: 'Success Message', detail: 'Message Content', life: 3000 });
-}
-const showError = () => {
-    toast.add({ severity: 'error', summary: 'Error Message', detail: 'Message Content', life: 3000 });
-}
 
 </script>
 
 
 <template>
-        <Toast />
-            <Button label="Success" class="p-button-success" @click="showSuccess" />
-            <Button label="Error" class="p-button-danger" @click="showError" />
+    <h5>Button Addons</h5>
+    <div class="grid p-fluid">
+        <div>
+            <div class="p-inputgroup">
+                <Button label="Search" />
+                <InputText placeholder="Keyword" />
+            </div>
+        </div>
+
+        <div>
+            <div class="p-inputgroup">
+                <InputText placeholder="Keyword" />
+                <Button icon="pi pi-search" class="p-button-warning" />
+            </div>
+        </div>
+
+        <div>
+            <div class="p-inputgroup">
+                <Button icon="pi pi-check" class="p-button-success" />
+                <InputText placeholder="Vote" />
+                <Button icon="pi pi-times" class="p-button-danger" />
+            </div>
+        </div>
+    </div>
 </template>
 

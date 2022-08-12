@@ -17,25 +17,21 @@ const tests = ref([
         id: "geography",
         score: testP.Geography,
         av: testP.GeographyAv,
-
     },
     {
         id: "math2",
         score: testP.Math2,
         av: testP.Math2Av,
-
     },
     {
         id: "mathB",
         score: testP.MathB,
         av: testP.MathBAv,
-
     },
     {
         id: "Physics",
         score: testP.Physics,
         av: testP.PhysicsAv,
-
     },
     {
         id: "Creature",

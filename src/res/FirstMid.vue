@@ -10,11 +10,14 @@ import Button from 'primevue/button';
 const toast = useToast();
 
 const showSuccess = () => {
-    toast.add({ severity: 'success', summary: 'Success Message', detail: 'Message Content', life: 3000 });
+    toast.add({ severity: 'success', summary: '入力が完了しました', detail: 'Message Content', life: 3000 });
 }
 const showError = () => {
-    toast.add({ severity: 'error', summary: 'Error Message', detail: 'Message Content', life: 3000 });
+    toast.add({ severity: 'error', summary: '入力が失敗しました', detail: 'Message Content', life: 3000 });
 }
+
+const num=ref()
+const numtf=ref(false)
 
 const testP = firstMidStore()
 
@@ -96,13 +99,16 @@ const submitForm = () => {
 
 <template>
     <h2>firstMid</h2>
-            <Toast />
-            <Button label="Success" class="p-button-success" @click="showSuccess" />
-            <Button label="Error" class="p-button-danger" @click="showError" />
+    <Toast />
+    <Button label="Success" class="p-button-success" @click="showSuccess" />
+    <Button label="Error" class="p-button-danger" @click="showError" />
+    <Button @click="numtf ? showSuccess() : showError()" />
+    <InputNumber v-model="num" suffix="点" :allowEmpty="numtf" />
 
     <form>
         <div v-if="tests">
-            <Button @click.prevent="submitForm" @click="showSuccess" class="p-button-raised p-button-outlined">入力</Button>
+            <Button @click.prevent="submitForm" @click="showSuccess"
+                class="p-button-raised p-button-outlined">入力</Button>
             <div v-for="(test, index) in tests" :key="test.score">
                 <span class="p-float-label input">
                     <InputNumber v-model="test.score" mode="decimal" :useGrouping="false" suffix="点" showButtons
