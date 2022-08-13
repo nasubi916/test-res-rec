@@ -61,16 +61,19 @@ const shares = ref([
 </script> 
 
 <template>
-    <h1>record</h1>
-    <SpeedDial :model="shares" class="bottom-right" type="quarter-circle" direction="up-left" :radius=95 @click=bbb()
-        showIcon="pi pi-link" />
-    <TabMenu :model="radars" />
-    <Card class="size">
-        <template #content>
-            <RouterView />
-        </template>
-    </Card>
-    <Combo />
+    <SpeedDial :model="shares" class="bottom-right" type="quarter-circle"
+        direction="up-left" :radius=95 @click=bbb() showIcon="pi pi-link" />
+    <div class="grid p-fluid">
+        <Card class="size">
+            <template #header>
+                <TabMenu :model="radars" />
+            </template>
+            <template #content>
+                <RouterView />
+            </template>
+        </Card>
+        <Combo />
+    </div>
 
 
 </template>

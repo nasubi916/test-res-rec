@@ -34,9 +34,8 @@ i {
 }
 
 .size {
-  width: 500px;
-  height: 500px;
-}
+  width: 570px;
+};
 
 @media (min-width: 1024px) {
   header {

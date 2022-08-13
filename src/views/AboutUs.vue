@@ -3,8 +3,6 @@ import Avatar from 'primevue/avatar';
 </script>
 
 <template>
-	<h1>AboutUs</h1>
-
 	<Avatar shape="circle" size="large">
 	<img src="@/image/nasubi.png">
 	</Avatar>

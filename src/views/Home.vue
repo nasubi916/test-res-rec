@@ -7,8 +7,6 @@ const isLoading=ref(true)
 </script>
 
 <template>
-	<div>
-	<h1>home</h1>
 	<a href="https://ja.wikipedia.org/wiki/%E3%81%A8%E3%82%8D%E3%82%8D" target="_blank">
 	とろろ</a>(test result record)β
 	<br>テストの結果を記録、グラフ化する
@@ -23,6 +21,5 @@ const isLoading=ref(true)
 	<br><Button class="p-button-raised p-button-rounded p-button-outlined p-button-link" >fffff</Button>
 	<Button label="Save" icon="pi pi-check" :loading="isLoading" />
 	<br><br>
-	</div>
 
 </template>

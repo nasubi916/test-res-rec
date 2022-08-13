@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import TabMenu from 'primevue/tabmenu';
 import { RouterView } from 'vue-router';
 import Toast from 'primevue/toast';
+import Card from 'primevue/card';
 
 const testTerm = ref([
     {
@@ -30,9 +31,12 @@ const testTerm = ref([
 </script>
 
 <template>
-    <h1>result</h1>
-    <Toast/>
-    <TabMenu :model="testTerm" />
+    <Toast />
+    <Card>
+        <template #header>
+            <TabMenu :model="testTerm" />
+        </template>
+    </Card>
     <RouterView />
     <!-- 総合計と平均獲得点数をComputedで出す -->
 </template>
