@@ -62,7 +62,7 @@ const shares = ref([
 
 <template>
     <h1>record</h1>
-    <SpeedDial :model="shares" class="bottom-right" type="quarter-circle" direction="up-left" :radius=150 @click=bbb()
+    <SpeedDial :model="shares" class="bottom-right" type="quarter-circle" direction="up-left" :radius=95 @click=bbb()
         showIcon="pi pi-link" />
     <TabMenu :model="radars" />
     <Card class="size">

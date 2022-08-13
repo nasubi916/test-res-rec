@@ -3,6 +3,15 @@ import { ref } from 'vue'
 import { secondMidStore } from '../stores/secondMid'
 import InputNumber from 'primevue/inputnumber';
 import Button from 'primevue/button';
+import { useToast } from "primevue/usetoast";
+
+const toast = useToast();
+const showSuccess = () => {
+    toast.add({ severity: 'success', summary: 'Success Message', detail: 'Message Content', life: 3000 });
+}
+const showError = () => {
+    toast.add({ severity: 'error', summary: 'Error Message', detail: 'Message Content', life: 3000 });
+}
 
 
 const testP = secondMidStore()
@@ -102,7 +111,7 @@ const submitForm = () => {
             <div v-for="ts in test">
                 <div class="p-inputgroup">
                     <div v-for="t in ts">
-                        <span class="p-float-label input resultInput">
+                        <span class="p-float-label resultInput">
                             <InputNumber v-model="t.score" mode="decimal" :useGrouping="false" suffix="点" showButtons
                                 incrementButtonClass="p-button-outlined"
                                 decrementButtonClass="p-button-danger p-button-outlined"
@@ -113,8 +122,7 @@ const submitForm = () => {
                 </div>
             </div>
         </div>
-        <Button @click.prevent="submitForm()" class="p-button-raised p-button-outlined">入力</Button>
-        <br>
+        <Button @click.prevent="submitForm(),showSuccess()" class="p-button-raised p-button-outlined">入力</Button>
     </form>
 
     <form>
@@ -122,7 +130,7 @@ const submitForm = () => {
             <div v-for="ts in test">
                 <div class="p-inputgroup">
                     <div v-for="t in ts">
-                        <span class="p-float-label input ">
+                        <span class="p-float-label resultInput">
                             <InputNumber v-model="t.av" mode="decimal" :useGrouping="false" suffix="点" showButtons
                                 incrementButtonClass="p-button-outlined"
                                 decrementButtonClass="p-button-danger p-button-outlined"
@@ -133,7 +141,7 @@ const submitForm = () => {
                 </div>
             </div>
         </div>
-        <Button @click.prevent="submitForm()" class="p-button-raised p-button-outlined">入力</Button>
+        <Button @click.prevent="submitForm(),showSuccess()" class="p-button-raised p-button-outlined">入力</Button>
     </form>
 
 </template>
