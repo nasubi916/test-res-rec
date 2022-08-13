@@ -93,8 +93,6 @@ const submitForm = () => {
     //いつかFor文でまとめる
 }
 
-const num = ref()
-
 </script>
 
 <template>
@@ -104,7 +102,7 @@ const num = ref()
             <div v-for="ts in test">
                 <div class="p-inputgroup">
                     <div v-for="t in ts">
-                        <span class="p-float-label input ">
+                        <span class="p-float-label input resultInput">
                             <InputNumber v-model="t.score" mode="decimal" :useGrouping="false" suffix="点" showButtons
                                 incrementButtonClass="p-button-outlined"
                                 decrementButtonClass="p-button-danger p-button-outlined"

@@ -16,8 +16,8 @@ i {
   color: var(--text-color);
 }
 
-.input{
-  margin:20px
+.resultInput{
+  margin-top: 25px;
 }
 
 .right {
