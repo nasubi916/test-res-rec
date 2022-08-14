@@ -25,7 +25,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstMidP.JapaneseAv, firstFinalP.JapaneseAv, secondMidP.JapaneseAv, secondFinalP.JapaneseAv, thirdFinalP.JapaneseAv]
@@ -48,7 +48,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstMidP.GeographyAv, firstFinalP.GeographyAv, secondMidP.GeographyAv, secondFinalP.GeographyAv, thirdFinalP.GeographyAv]
@@ -71,7 +71,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstMidP.Math2Av, firstFinalP.Math2Av, secondMidP.Math2Av, secondFinalP.Math2Av, thirdFinalP.Math2Av]
@@ -94,7 +94,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstMidP.MathBAv, firstFinalP.MathBAv, secondMidP.MathBAv, secondFinalP.MathBAv, thirdFinalP.MathBAv]
@@ -117,7 +117,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstMidP.PhysicsAv, firstFinalP.PhysicsAv, secondMidP.PhysicsAv, secondFinalP.PhysicsAv, thirdFinalP.PhysicsAv]
@@ -140,7 +140,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstMidP.CreatureAv, firstFinalP.CreatureAv, secondMidP.CreatureAv, secondFinalP.CreatureAv, thirdFinalP.CreatureAv]
@@ -163,7 +163,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstMidP.EnglishAv, firstFinalP.EnglishAv, secondMidP.EnglishAv, secondFinalP.EnglishAv, thirdFinalP.EnglishAv]
@@ -186,7 +186,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstMidP.InfoIndusAv, firstFinalP.InfoIndusAv, secondMidP.InfoIndusAv, secondFinalP.InfoIndusAv, thirdFinalP.InfoIndusAv]
@@ -209,7 +209,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstFinalP.HealthAv, secondFinalP.HealthAv, thirdFinalP.HealthAv]
@@ -232,7 +232,7 @@ const terms = ref([
             datasets: [{
                 type: 'line',
                 label: 'Average Score',
-                borderColor: 'var(--gray-50)',
+                borderColor: '#222222',
                 borderWidth: 2,
                 fill: false,
                 data: [firstFinalP.AlgoAv, secondFinalP.AlgoAv, thirdFinalP.AlgoAv]

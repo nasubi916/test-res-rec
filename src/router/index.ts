@@ -11,6 +11,7 @@ import FirstFinal from "@/res/FirstFinal.vue";
 import SecondMid from "@/res/SecondMid.vue";
 import SecondFinal from "@/res/SecondFinal.vue";
 import ThirdFinal from "@/res/ThirdFinal.vue";
+import FileDrop from "@/res/FileDrop.vue";
 
 import RadarFM from "@/rec/radar/RadarFM.vue";
 import RadarFF from "@/rec/radar/RadarFF.vue";
@@ -55,6 +56,10 @@ const router = createRouter({
           path: "/tf",
           component: ThirdFinal,
         },
+        {
+          path: '/fd',
+          component: FileDrop,
+        }
       ],
     },
     {

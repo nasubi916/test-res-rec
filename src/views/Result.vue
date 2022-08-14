@@ -25,6 +25,10 @@ const testTerm = ref([
     {
         label: 'thirdFinal',
         to: '/tf'
+    },
+    {
+        label: 'fileDrop',
+        to: '/fd'
     }
 ]);
 
@@ -36,7 +40,9 @@ const testTerm = ref([
         <template #header>
             <TabMenu :model="testTerm" />
         </template>
+        <template #content>
+            <RouterView />
+        </template>
     </Card>
-    <RouterView />
     <!-- 総合計と平均獲得点数をComputedで出す -->
 </template>
