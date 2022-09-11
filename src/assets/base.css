@@ -16,7 +16,7 @@ body {
 
 .stage {
 	display: grid;
-	grid-template-columns: repeat(2, 400px);  /* 2列 幅30px */
+	grid-template-columns: repeat(2, 570px);  /* 2列 幅30px */
 	grid-template-rows: repeat(2, 300px); /* 2行 高さ30px */
 	grid-gap: 2px; /* マス同士の隙間2px */
 }
