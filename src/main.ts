@@ -3,6 +3,7 @@ import { createPinia } from "pinia";
 
 import App from "./App.vue";
 import router from "./router";
+import VueGridLayout from 'vue-grid-layout';
 import PrimeVue from "primevue/config";
 import Ripple from 'primevue/ripple';
 import ToastService from 'primevue/toastservice';

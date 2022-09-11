@@ -21,5 +21,9 @@ const isLoading=ref(true)
 	<br><Button class="p-button-raised p-button-rounded p-button-outlined p-button-link" >fffff</Button>
 	<Button label="Save" icon="pi pi-check" :loading="isLoading" />
 	<br><br>
+		<span class="stage">
+			<div>hello</div>
+			<div>hello</div>
+		</span>
 
 </template>

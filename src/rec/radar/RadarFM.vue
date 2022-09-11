@@ -64,6 +64,5 @@ const Options = ref({
 </script>
 
 <template>
-<h2>radarFM</h2>
     <Chart type="radar" :data="radarData" :options="Options" />
 </template>
