@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import SpeedDial from 'primevue/speeddial';
 import TabMenu from 'primevue/tabmenu';
 import { RouterView } from 'vue-router';
-import Combo from '@/rec/Combo.vue';
 import ComboJp from '@/rec/combo/ComboJp.vue';
 import ComboGeo from '@/rec/combo/ComboGeo.vue'
 import ComboMath2 from '../rec/combo/ComboMath2.vue'
@@ -37,29 +35,6 @@ const radars = ref([
         to: '/rtf'
     }
 ]);
-
-const shares = ref([
-    {
-        label: 'link',
-        icon: 'pi pi-link',
-    },
-    {
-        label: 'twitter',
-        icon: 'pi pi-twitter',
-        command: () => {
-            window.location.href = 'https://github.com/nasubi916'
-
-        }
-    },
-    {
-        label: 'photo',
-        icon: 'pi pi-image',
-    },
-    {
-        label: 'instagram',
-        icon: 'pi pi-instagram',
-    },
-])
 
 </script> 
 
