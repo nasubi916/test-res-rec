@@ -20,17 +20,6 @@ const routes = ref([
 		icon: 'pi pi-fw pi-file',
 		to: '/record/rfm',
 	},
-	{
-		label: 'AboutUs',
-		icon: 'pi pi-user',
-		to: '/us',
-		class:'right'
-	},
-	{
-		label: 'TestField',
-		icon: 'pi pi-bolt',
-		to: '/test'
-	},
 ]);
 
 </script>

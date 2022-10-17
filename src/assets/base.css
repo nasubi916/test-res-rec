@@ -3,8 +3,7 @@
 body {
   min-height: 100vh;
   color: #000000;
-  background: #fff;
-  transition: color 0.5s, background-color 0.5s;
+  background-image: url("../image/wave-haikei.svg");
   line-height: 1.6;
   font-family: var(--font-family);
   font-size: medium;

@@ -3,8 +3,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import Result from "@/views/Result.vue";
 import Record from "@/views/Record.vue";
-import AboutUs from "@/views/AboutUs.vue";
-import TestField from "@/views/TestField.vue";
 
 import FirstMid from "@/res/FirstMid.vue";
 import FirstFinal from "@/res/FirstFinal.vue";
@@ -92,16 +90,6 @@ const router = createRouter({
           component: RadarTF,
         },
       ],
-    },
-    {
-      path: "/us",
-      name: "AboutUs",
-      component: AboutUs,
-    },
-    {
-      path: "/test",
-      name: "Test",
-      component: TestField,
     },
   ],
 });
